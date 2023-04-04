@@ -1,0 +1,3 @@
+=> config configures which environment(Development, production,..),which database to use etc.
+=>we add Validation in both controllers and usecases
+=>
