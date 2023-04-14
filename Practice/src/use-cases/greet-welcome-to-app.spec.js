@@ -1,16 +1,15 @@
-const assert = require('assert');
-const {Given, When, Then} = require('cucumber');
-const makeGreetWelcomeToApp = require('./greet-welcome-to-app');
+const assert = require("assert");
+const { Given, When, Then } = require("cucumber");
+const makeGreetWelcomeToApp = require("./greet-welcome-to-app");
 const greetWelcomeToApp = makeGreetWelcomeToApp();
 
-
-Given('AppName is Sample', () => {
-  this.appName = 'Sample';
+Given("AppName is Sample", () => {
+  this.appName = "Sample";
 });
-When('I go to system', async () => {
-  this.result = greetWelcomeToApp({appName: this.appName});
+When("I go to system", async () => {
+  this.result = greetWelcomeToApp({ appName: this.appName });
 });
 
-Then('It greets me welcome', () => {
+Then("It greets me welcome", () => {
   assert.equal(this.result, `Welcome to ${this.appName} service`);
 });
